@@ -16,6 +16,7 @@ cache: false
 install: true
 
 before_script:
+  - service docker status
   - if [ "$TRAVIS_JDK_VERSION" == "openjdk8" ]; then
     export IMAGE_NAME="openjdk:8u212-jre-alpine";
     if [ "${TRAVIS_CPU_ARCH}" == "arm64" ]; then
